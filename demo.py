@@ -6,6 +6,7 @@ req.encoding="utf8"  #轉換為"utf8"
 if req.status_code == 200:
    soup=BeautifulSoup(req.text,"lxml") #lxml呈現資料的格式
    result1=soup.find_all("li")
+   
    fp=open("out2.txt","w",encoding="utf8")
    i=1 #讓顯示資料較乾淨
    for val in result1:
